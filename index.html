@@ -1,1 +1,88 @@
-Hello world.
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jboyd963 personal test site</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <h1>jboyd963</h1>
+      <ul>
+        <li><a href="#work-section">work</a></li>
+        <li><a href="#about-section">about</a></li>
+        <li><a href="#contact-section">contact</a></li>
+      </ul>
+    </nav>
+    <section class="welcome full-page-section">
+      <h2>welcome</h2>
+      <section class="welcome-subsection">
+        <a href="#work-section">continue</a>
+      </section>
+    </section>
+
+    <section id="work-section">
+      <h2>work</h2>
+      <section class="work-section-content">
+        <h3>Old Work</h3>
+        <section class="work">
+          <section class="grid-container">
+            <section class="grid-item">
+              <img
+                src="media/a-desk.jpg"
+                alt="Drawing of some items on a desk."
+              />
+              <span>Desk Items</span>
+            </section>
+          </section>
+          <section class="grid-item">
+            <img
+                src="media/dog-and-chair.png"
+                alt="Drawing of a dog and a chair"
+                onclick="this.requestFullscreen()"
+              />
+            <span>Dog and Chair</span>
+          </section>
+        </section>
+        <h3>New Work</h3>
+        <section class="work">
+          <section class="grid-container">
+            <section class="grid-item grid-item-large">
+              <img
+                src="media/cool-pear.png"
+                alt="Drawing of a cool pear."
+              />
+              <span>Cool Pear.</span>
+            </section>
+          </section>
+        </section>
+      </section>
+    </section>
+
+    <section class="about full-page-section" id="about-section">
+      <h2>about</h2>
+      <section class="about-content">
+        <section class="about-paragraph">
+          <p>
+            This is just a test page.
+          </p>
+        </section>
+      </section>
+    </section>
+    <section class="contact full-page-section" id="contact-section">
+      <h2>contact</h2>
+      <section class="contact-content">
+        <span>Maybe dont?</span>
+      </section>
+    </section>
+    <footer>&copy; jboyd963</footer>
+  </body>
+</html>
