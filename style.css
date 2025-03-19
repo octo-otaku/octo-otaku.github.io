@@ -35,7 +35,7 @@
     color: white;
     font-family: "Montserrat", sans-serif;
     background-image: url('media/path191.png');
-    background-color: #240c0c;
+    background-color: #ffe987;
   }
   
   .full-page-section {
@@ -43,7 +43,7 @@
   }
   
   a:hover {
-    color: orange;
+    color: #ff77b2;
   }
   
   nav {
