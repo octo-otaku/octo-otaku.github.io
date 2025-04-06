@@ -1,16 +1,3 @@
-/* Clear fix hack */
-.clearfix:after {
-    content: ".";
-    display: block;
-    clear: both;
-    visibility: hidden;
-    line-height: 0;
-    height: 0;
-  }
-  
-  .clear {
-    clear: both;
-  }
   
   * {
     margin: 0px;
@@ -22,121 +9,84 @@
     box-sizing: border-box;
   }
   
-  /******************************************
-     /* BASE STYLES
-     /*******************************************/
-  html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 3.5rem;
-  }
-  body {
-    margin: 0;
-    width: 100%;
-    color: white;
-    font-family: "Montserrat", sans-serif;
-    background-image: url('media/path191.png');
-    background-color: #ffe987;
-  }
-  
-  .full-page-section {
-    height: 100vh;
-  }
-  
   a:hover {
     color: #ff77b2;
   }
+
+  /******************************************
+  /* BASE STYLES
+  /*******************************************/
+  body {
+    margin: 0;
+    width: 100%;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    background-color: #ffe987;
+  }  
   
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #140000;
-    filter: drop-shadow(1px 3px 8px #000);
-    height: 3rem;
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    z-index: 10;
+  /* Add a black background color to the top navigation */
+.topnav {
+  position: relative;
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Centered section inside the top navigation */
+.topnav-centered a {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+  float: right;
+}
+
+/* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav-right {
+    float: none;
+    display: block;
   }
-  
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #140000;
-    filter: drop-shadow(1px 3px 8px #000);
-    height: 3rem;
-    position: fixed;
+
+  .topnav-centered a {
+    position: relative;
     top: 0;
-    width: 100vw;
-    z-index: 10;
+    left: 0;
+    transform: none;
   }
+}
+
   
   h1 {
     margin: 0.2rem;
     font-size: 1.5rem;
     padding-left: 1rem;
-  }
-  
-  h2 {
-    writing-mode: tb-rl;
-    text-orientation: upright;
-    font-size: 2rem;
-    letter-spacing: 20px;
-    padding: 0 2rem;
-    font-weight: 700;
-  }
-  
-  /* .welcome{
-    /* background-color:  #D0784D; */
-    /* background-image: linear-gradient(#D0784D, #240c0c)
-  } */ 
-  
-  .welcome,
-  .work {
-    display: flex;
-    width: 100%;
-    align-items: center;
-  }
-  /* Welcome Section */
-  
-  .welcome,
-  .about,
-  .contact {
-    padding-top: 5.5rem;
-  }
-  
-  .welcome-subsection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    font-size: 1.4rem;
-    padding: 0 4rem;
-    text-align: center;
-  }
-  
-  .welcome-subsection a {
-    background-color: white;
-    border-radius: .5rem;
-    color: #240c0c;
-    display: flex;
-    justify-content: center;
-    padding: 0.5rem 4rem;
-    width: 4.5rem;
-    margin: 0.7rem auto;
-  }
-  
-  .welcome-subsection a:hover {
-    background-color: gray;
-  }
-  
-  .welcome-subsection img {
-    filter: invert(1);
-    padding-bottom: 1.5rem;
-    max-width: 250px;
-    width: 100%;
   }
   
   ul {
@@ -158,143 +108,4 @@
   
   img {
     max-width: 100%;
-  }
-  
-  /* Mosaic section */
-  
-  .work-section {
-    display: flex;
-    width: 100%;
-  }
-  
-  .work-section h2 {
-    position: sticky;
-    top: 6rem;
-  }
-  
-  #work-section h3 {
-    padding: 5.5rem 0rem 3rem 0rem;
-    display: flex;
-    justify-content: center;
-    font-size: x-large;
-  }
-  
-  .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* height:100vh; */
-    justify-items: center;
-    grid-gap: 1rem;
-    /* grid-row-gap: 1.2rem */
-    padding-right: 1rem;
-  }
-  
-  .grid-item {
-    position: relative;
-    text-align: center;
-    opacity: 1;
-  }
-  
-  .grid-item > span {
-    position: absolute;
-    font-size: small;
-    font-weight: bold;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-  }
-  
-  .grid-item:hover > span {
-    opacity: 1;
-    display: inline;
-  }
-  
-  .grid-item:hover > img {
-    opacity: 0.5;
-  }
-  
-  .grid-item-large {
-    grid-row: span 2;
-  }
-  
-  /* About section  */
-  .about,
-  .contact {
-    display: flex;
-    align-items: center;
-    font-size: large;
-  }
-  
-  .about-paragraph {
-    text-align: center;
-    margin-right: 2em;
-  }
-  
-  .about p {
-    padding: 0.5rem;
-  }
-  
-  .about img {
-    display: none;
-  }
-  
-  /* Contact Section */
-  /* .contact{
-    background-image: linear-gradient(#240c0c,#424033);
-    height: 50rem;
-  } */
-  .contact-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    align-items: center;
-  }
-  
-  .contact span {
-    font-size: x-large;
-    padding-bottom: 1rem;
-  }
-  
-  /* Footer */
-  footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #140000;
-    height: 3rem;
-    padding-left: 4rem;
-  }
-  
-  /* Media queries */
-  @media screen and (min-width: 674px) {
-    .grid-container {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-  }
-  
-  @media screen and (min-width: 768px) {
-    .about-content {
-      --min: 15ch;
-      --gap: 1rem;
-      display: grid;
-      grid-gap: var(--gap);
-      /* min() with 100% prevents overflow
-    in extra narrow spaces */
-      grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
-      align-items: center;
-    }
-    .about p,
-    .contact-content {
-      font-size: x-large;
-      line-height: 2rem;
-    }
-    .about img {
-      display: block;
-      padding-right:1rem;
-    }
-    .contact span {
-      font-size: xx-large;
-    }
   }
