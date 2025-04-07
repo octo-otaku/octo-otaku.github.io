@@ -1,6 +1,5 @@
   
   * {
-    margin: 20px;
     padding: 0px;
     border: 0;
     outline: 0;
@@ -20,8 +19,10 @@
     margin: 0;
     width: 100%;
     color: rgb(9, 61, 124);
-    font-family: "Montserrat", sans-serif;
     background-color: rgb(255, 239, 170);
+
+    font-family: "Sour Gummy", sans-serif;
+
   }  
   
   /* Add a black background color to the top navigation */
@@ -38,7 +39,7 @@
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 25px;
 }
 
 /* Change the color of links on hover */
@@ -63,6 +64,14 @@
 /* Right-aligned section inside the top navigation */
 .topnav-right {
   float: right;
+}
+
+.maincontent {
+  margin: 20px;
+}
+
+.maincontent img {
+  margin: 20px;
 }
 
 /* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
