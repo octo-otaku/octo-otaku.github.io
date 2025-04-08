@@ -21,10 +21,17 @@
     color: rgb(9, 61, 124);
     background-color: rgb(255, 239, 170);
     font-size: 20px;
-
     font-family: "Sour Gummy", sans-serif;
 
-  }  
+  }    
+  header {
+    margin: 0;
+    width: 100%;
+    color:rgb(255, 119, 178);
+    font-size: 30px;
+    font-family: "Sour Gummy", sans-serif;
+
+  }
 
   
   /* Add a black background color to the top navigation */
@@ -54,19 +61,6 @@
 .topnav a.active {
   /* color: white; */}
 
-/* Centered section inside the top navigation */
-.topnav-centered a {
-  float: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* Right-aligned section inside the top navigation */
-.topnav-right {
-  float: right;
-}
 
 .maincontent {
   margin: 20px;
